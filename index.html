@@ -1,0 +1,341 @@
+
+<html>
+<script src="Materias.js"></script>
+<script src="Perguntas.js"></script>
+<script src="Jogador1.js"></script>
+<script src="Jogador2.js"></script>
+
+<script>
+  var materia = []
+
+  var mat = new Materias('Matemática')
+  materia.push(mat)
+
+  var fis = new Materias('Física')
+  materia.push(fis)
+
+  var bd = new Materias('Banco de dados')
+  materia.push(bd)
+
+  var filo = new Materias ('Filosofia')
+  materia.push(filo)
+
+
+  var permat = []
+  var mat = new Perguntas('Eu comprei 500 balas comi 305 e dei 120 para meu irmão. Com quantas balas eu fiquei? ', ' a)75' + '\n' + 'b)60' + '\n' + 'c)65', 'a')
+  permat.push(mat)
+
+  var mat1 = new Perguntas('Calcule o valor da expressão [(5+3)x12]/[(5-3)x4]', 'a)8' + '\n' + 'b)24' + '\n' + 'c)12', 'c')
+  permat.push(mat1)
+
+  var mat2 = new Perguntas('Eu comprei 20 CDs de 12,00 reais e 28 DVDs de 10,00 reais.Quanto eu gastei no total?', 'a)360' + '\n' + 'b)520' + '\n' + 'c)900', 'b')
+  permat.push(mat2)
+
+  var mat3 = new Perguntas('Considere os conjuntos a seguir:' + '\n' + 'A = { 3, 4, 5, 6, 7} e B = {5, 6, 7, 8, 9 ...},A - B é:', 'a){5,6,7}' + '\n' + 'b){8,9}' + '\n' + 'c){3,4}', 'c')
+  permat.push(mat3)
+
+  var mat4 = new Perguntas('Quantos são os anagramas da palavra MATEMÁTICA?', 'a)10!' + '\n' + 'b)10!/3!2!2!' + '\n' + 'c)10!/7!', 'b')
+  permat.push(mat4)
+
+  var mat5 = new Perguntas('Quanto é 5% de 200,00 reais?', 'a)100' + '\n' + 'b)20' + '\n' + 'c)10', 'c')
+  permat.push(mat5)
+ 
+
+  var perfis = []
+  var fis0 = new Perguntas('Nos trabalhos científicos, números muito grandes ou próximos de zero, são escritos em notação científica, que consiste em um número x, tal que 1 < x < 10 multiplicado por uma potência de base 10. Assim sendo, 0,00000045 deve ser escrito da seguinte forma:', 'a)4,5x10^-7' + '\n' + 'b)4,5x10^8' + '\n' + 'c)0,45x10^7', 'a')
+  perfis.push(fis0)
+
+  var fis1 = new Perguntas('Um foguete parte do repouso e sobe com aceleração constante de 30 m/s². Qual é a altura do foguete quando ele atinge a velocidade de 300 m', 'a)10m' + '\n' + 'b)100m' + '\n' + 'c)1500', 'c')
+  perfis.push(fis1)
+
+  var fis2 = new Perguntas('Sob a ação exclusiva de duas forças F1 e F2, de mesma direção, um corpo de 6,0 kg de massa adquire aceleração de módulo igual a 4,0 m/s². Se o módulo de F1 vale 20 N, o módulo de F2, em newtons, só pode vale', 'a)44N' + '\n' + 'b)4N' + '\n' + 'c)0', 'b')
+  perfis.push(fis2)
+
+  var fis3 = new Perguntas('Um bloco de madeira de 10 kg, inicialmente em repouso sobre uma superfície plana e horizontal, é submetido a uma força F. Sabendo que o coeficiente de atrito estático entre a madeira e a superfície é de 0,6. Qual o valor máximo de F para que o bloco de madeira permaneça em equilíbrio estático?\nAdote g= 10 m/', 'a)35N' + '\n' + 'b)60N' + '\n' + 'c)40 N', 'b')
+  perfis.push(fis3)
+
+  var fis4 = new Perguntas('O conceito de temperatura foi aprimorado nos últimos séculos. Nos dias atuais está relacionado à', 'a)grau de agitação térmica.' + '\n' + 'b)equilíbrio térmico do meio.' + '\n' + 'c)sensação de quente e frio.', 'a')
+  perfis.push(fis4)
+
+  var fis5 = new Perguntas('Um pêndulo simples oscila com uma amplitude máxima de 60º em relação à vertical, momento em que a tensão no cabo é de 10 N. Assinale a opção com o valor da tens//ão no ponto em que ele atinge sua velocidade máxima', 'a)10N' + '\n' + 'b)40N' + '\n' + 'c)20N', 'b')
+  perfis.push(fis5)
+
+
+  var perbd = []
+ var bd0 = new Perguntas('O comando para alterar uma tabela e adicionar uma nova coluna é:', 'a)drop column/altertable/add column' + '\n' + 'b)alter table' + '\n' + 'c)alter table/add column', 'c')
+ perbd.push(bd0)
+
+  var bd1 = new Perguntas('Das seguintes afirmativas sobre Sistemas Gestores de Banco de Dados (SGBD), assinale a que está ERRADA.', 'a)Um SGBD não pode ser instalado em um computador portátil' + '\n' + 'b)Um SGBD deve oferecer um servidor de mecanismo de acesso.' + '\n' + 'c)Os SGBDs permitem a criação de cópias de segurança.', 'a')
+  perbd.push(bd1)
+
+  var bd2 = new Perguntas('Acerca dos conceitos de banco de dados assinale a alternativa CORRETA.', 'a)Um banco de dados representa algum aspecto do mundo real, às vezes chamado de mini mundo ou de universo de discurso (UoD – Universe of Discourse), no entanto, as mudanças no minimundo não são refletidas no banco de dados.' + '\n' + 'b)Um banco de dados é projetado, construído e populado com dados aleatórios sem finalidade específica.' + '\n' + 'c)Um banco de dados é uma coleção logicamente coerente de dados com algum significado inerente. Uma variedade aleatória de dados não pode ser corretamente chamada de banco de dados.', 'c')
+  perbd.push(bd2)
+
+  var bd3 = new Perguntas('As soluções de big data focalizam dados que já existem, descartam dados não estruturados e disponibilizam os dados estruturados.', 'a)Certo' + '\n' + 'b)Errado', 'b')
+  perbd.push(bd3)
+
+  var bd4 = new Perguntas('Em um projeto de banco de dados, a projetista percebeu que uma tabela A precisa de um novo relacionamento com a tabela B, de modo que a única maneira de concretizar esta conexão é a criação de uma terceira tabela, independente. Isto significa que a cardinalidade desta nova relação entre A e B é:', 'a)1:1' + '\n' + 'b)N:1' + '\n' + 'c)N:N', 'c')
+  perbd.push(bd4)
+
+  var bd5 = new Perguntas('Comando que adiciona uma coluna de nome ID_editora a uma tabela já existente, de nome tbl_livro?', 'a)ALTER TABLE ADD ID_editora tbl_livro SMALLINT NOT NULL.' + '\n' + 'b)ALTER TABLE tbl_livro INSERT ID_editora SMALLINT NOT NULL.' + '\n' + 'c)ALTER TABLE tbl_livro ADD ID_editora SMALLINT NOT NULL', 'c')
+  perbd.push(bd5)
+
+  var perfilo = []
+
+  var filo0 = new Perguntas('Segundo o relativismo cultural', 'a)O relativismo cultural prega que independente da cultura crimes como infanticídeo e estupro são errados sempre.' + '\n' + 'b)Não há um padrão objetivo que pode ser usado para julgar o código de uma sociedade como melhor do que de outra sociedade. Não há verdades morais que valham para todas as pessoas em todos os tempos' + '\n' + 'c)Culturas diferentes têm códigos morais diferentes.')
+  perfilo.push(filo0)
+
+  var filo1 = new Perguntas('')
+  perfilo.push(filo1)
+  
+  var filo2 = new Perguntas('')
+  perfilo.push(filo2)
+
+  var filo3 = new Perguntas('')
+  perfilo.push(filo3)
+
+  var filo4 = new Perguntas('')
+  perfilo.push(filo4)
+
+  var filo5 = new Perguntas('')
+  perfilo.push(filo5)
+
+  
+ 
+  var nomej1 = prompt("Digite o nome do jogador 1:")
+  var nomej2 = prompt("Digite o nome do jogador 2:")
+  var jogador1 = new Jogador1(nomej1)
+  var jogador2 = new Jogador2(nomej2)
+  var materia = [permat, perfis, perbd, perfilo]
+  var escolha = parseInt(prompt('Digite a matéria desejada:' + '\n' + '0-Matemática' + '\n' + '1-Física' + '\n' + '2-Banco de dados' + '\n' + '3-Filosofia'))
+  if (escolha == 0) {
+    var pos = -1
+    var cartasj1 = []
+    var cartasj2 = []
+    for (var c1 = 0; c1 < 3; c1++) {   //percorre a carta do jogador 1
+      pos = Math.floor(Math.random() * permat.length) //carta aleatoria de matematica
+      cartasj1.push(permat[pos]) //pega a carta aleatoria e adiciona no vetor pos
+      permat.splice(pos, 1) // remove a carta e retorna ao for
+    }
+    for (var c2 = 0; c2 < 3; c2++) {
+      pos = Math.floor(Math.random() * permat.length)
+      cartasj2.push(permat[pos])
+      permat.splice(pos, 1)
+    }
+    for (var j1 = 0; j1 < 3; j1++) {
+      alert(cartasj1[j1].getPergunta())  //mostra a pergunta aleatoria do j1 e adiciona no vetor j1
+      alert(cartasj1[j1].getAlternativa()) //mostra a pergunta aleatoria do j1 e adiciona no vetor j1
+
+      var respj1 = prompt("Jogador 1:" + nomej1 + '\n' + "Digite a alternativa correta:")
+      
+      if (respj1 == cartasj1[j1]._resposta) {
+        alert('Parabéns, você acertou!') 
+        jogador1._pontos = jogador1._pontos + 1 //adiciona os pontos de 1 em 1
+      }
+      else if (respj1 != cartasj1[j1]._resposta) {
+        alert('Que pena, você errou') 
+      }
+    }
+    for (var j2 = 0; j2 < 3; j2++) {
+      alert(cartasj2[j2].getPergunta())
+      alert(cartasj2[j2].getAlternativa())
+
+      var respj2 = prompt("Jogador 2:" + nomej2 + '\n' + "Digite a alternativa correta:")
+
+      if (respj2 = cartasj2[j2]._resposta) {
+        alert('Parabéns, você acertou!')
+        jogador2._pontos = jogador2._pontos + 1
+      }
+      else if (respj2 != cartasj2[j2]._resposta) {
+        alert('Que pena, você errou!')
+      }
+    }
+    alert("Pontos jogador 1:" + jogador1._pontos)
+    alert("Pontos jogador 2:" + jogador2._pontos)
+
+  for (var s = 0; s < 1; s++) {
+    if (jogador1._pontos > jogador2._pontos) {
+      alert('Parabéns' + nomej1 + '\n' + 'Você ganhou!!!')
+    }
+    else if (jogador1._pontos < jogador2._pontos) {
+      alert('Parabéns' + nomej2 + '\n' + 'Você ganhou!!!')
+    }
+    else if (jogador1._pontos == jogador2._pontos) {
+      alert('Empate')
+    }
+  }
+  }
+
+    else if (escolha == 1) {
+      var pos = -1
+      var cartasj1 = []
+      var cartasj2 = []
+      for (var c1 = 0; c1 < 3; c1++) {
+        pos = Math.floor(Math.random() * perfis.length)
+        cartasj1.push(perfis[pos])
+        perfis.splice(pos, 1)
+      }
+      for (var c2 = 0; c2 < 3; c2++) {
+        pos = Math.floor(Math.random() * perfis.length)
+        cartasj2.push(perfis[pos])
+        perfis.splice(pos, 1)
+      }
+      for (var j1 = 0; j1 < 3; j1++) {
+        alert(cartasj1[j1].getPergunta())
+        alert(cartasj1[j1].getAlternativa())
+        var respj1 = prompt("Jogador 1:" + nomej1 + '\n' + "Digite a alternativa correta:")
+
+
+        if (respj1 == cartasj1[j1]._resposta) {
+          alert('Parabéns, você acertou :)')
+          jogador1._pontos = jogador1._pontos + 1
+        }
+        else if (respj1 != cartasj1[j1]._resposta) {
+          alert('Que pena, você errou :(')
+        }
+      }
+      for (var j2 = 0; j2 < 3; j2++) {
+        alert(cartasj2[j2].getPergunta())
+        alert(cartasj2[j2].getAlternativa())
+        var respj2 = prompt("Jogador 2:" + nomej2 + '\n' + "Digite a alternativa correta:")
+
+        if (respj2 == cartasj2[j2]._resposta) {
+          alert('Parabéns, você acertou :)')
+          jogador2._pontos = jogador2._pontos + 1
+        }
+        else if (respj2 != cartasj2[j2]._resposta) {
+          alert('Que pena, você errou')
+        }
+      }
+    alert("Pontos jogador 1:" + jogador1._pontos)
+    alert("Pontos jogador 2:" + jogador2._pontos)
+
+    for (var s = 0; s < 1; s++) {
+      if (jogador1._pontos > jogador2._pontos) {
+        alert('Parabéns' + nomej1 + '\n' + 'Você ganhou!!!')
+      }
+      else if (jogador1._pontos < jogador2._pontos) {
+        alert('Parabéns' + nomej2 + '\n' + 'Você ganhou!!!')
+      }
+      else if (jogador1._pontos = jogador2._pontos) {
+        alert('Empate')
+      }
+    }
+    }
+ else if(escolha==2){
+   var pos = -1
+      var cartasj1 = []
+      var cartasj2 = []
+      for (var c1 = 0; c1 < 3; c1++) {
+        pos = Math.floor(Math.random() * perbd.length)
+        cartasj1.push(perbd[pos])
+        perbd.splice(pos, 1)
+      }
+      for (var c2 = 0; c2 < 3; c2++) {
+        pos = Math.floor(Math.random() * perbd.length)
+        cartasj2.push(perbd[pos])
+        perbd.splice(pos, 1)
+      }
+      for (var j1 = 0; j1 < 3; j1++) {
+        alert(cartasj1[j1].getPergunta())
+        alert(cartasj1[j1].getAlternativa())
+        var respj1 = prompt("Jogador 1:" + nomej1 + '\n' + "Digite a alternativa correta:")
+
+
+        if (respj1 == cartasj1[j1]._resposta) {
+          alert('Parabéns, você acertou :)')
+          jogador1._pontos = jogador1._pontos + 1
+        }
+        else if (respj1 != cartasj1[j1]._resposta) {
+          alert('Que pena, você errou :(')
+        }
+      }
+      for (var j2 = 0; j2 < 3; j2++) {
+        alert(cartasj2[j2].getPergunta())
+        alert(cartasj2[j2].getAlternativa())
+        var respj2 = prompt("Jogador 2:" + nomej2 + '\n' + "Digite a alternativa correta:")
+
+        if (respj2 == cartasj2[j2]._resposta) {
+          alert('Parabéns, você acertou :)')
+          jogador2._pontos = jogador2._pontos + 1
+        }
+        else if (respj2 != cartasj2[j2]._resposta) {
+          alert('Que pena, você errou')
+        }
+      }
+    alert("Pontos jogador 1:" + jogador1._pontos)
+    alert("Pontos jogador 2:" + jogador2._pontos)
+
+    for (var s = 0; s < 1; s++) {
+      if (jogador1._pontos > jogador2._pontos) {
+        alert('Parabéns' + nomej1 + '\n' + 'Você ganhou!!!')
+      }
+      else if (jogador1._pontos < jogador2._pontos) {
+        alert('Parabéns' + nomej2 + '\n' + 'Você ganhou!!!')
+      }
+      else if (jogador1._pontos = jogador2._pontos) {
+        alert('Empate')
+      }
+    }
+}
+else if (escolha == 3) {
+      var pos = -1
+      var cartasj1 = []
+      var cartasj2 = []
+      for (var c1 = 0; c1 < 3; c1++) {
+        pos = Math.floor(Math.random() * perfilo.length)
+        cartasj1.push(perfilo[pos])
+        perfilo.splice(pos, 1)
+      }
+      for (var c2 = 0; c2 < 3; c2++) {
+        pos = Math.floor(Math.random() * perfilo.length)
+        cartasj2.push(perfilo[pos])
+        perfilo.splice(pos, 1)
+      }
+      for (var j1 = 0; j1 < 3; j1++) {
+        alert(cartasj1[j1].getPergunta())
+        alert(cartasj1[j1].getAlternativa())
+        var respj1 = prompt("Jogador 1:" + nomej1 + '\n' + "Digite a alternativa correta:")
+
+
+        if (respj1 == cartasj1[j1]._resposta) {
+          alert('Parabéns, você acertou :)')
+          jogador1._pontos = jogador1._pontos + 1
+        }
+        else if (respj1 != cartasj1[j1]._resposta) {
+          alert('Que pena, você errou :(')
+        }
+      }
+      for (var j2 = 0; j2 < 3; j2++) {
+        alert(cartasj2[j2].getPergunta())
+        alert(cartasj2[j2].getAlternativa())
+        var respj2 = prompt("Jogador 2:" + nomej2 + '\n' + "Digite a alternativa correta:")
+
+        if (respj2 == cartasj2[j2]._resposta) {
+          alert('Parabéns, você acertou :)')
+          jogador2._pontos = jogador2._pontos + 1
+        }
+        else if (respj2 != cartasj2[j2]._resposta) {
+          alert('Que pena, você errou :(')
+        }
+      }
+    alert("Pontos jogador 1:" + jogador1._pontos)
+    alert("Pontos jogador 2:" + jogador2._pontos)
+
+    for (var s = 0; s < 1; s++) {
+      if (jogador1._pontos > jogador2._pontos) {
+        alert('Parabéns' + nomej1 + '\n' + 'Você ganhou!!!')
+      }
+      else if (jogador1._pontos < jogador2._pontos) {
+        alert('Parabéns' + nomej2 + '\n' + 'Você ganhou!!!')
+      }
+      else if (jogador1._pontos = jogador2._pontos) {
+        alert('Empate')
+      }
+    }
+    }
+else{
+  console.log("Escolha inválida")
+ }
+</script>
+</html>
